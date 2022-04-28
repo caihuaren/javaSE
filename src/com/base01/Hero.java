@@ -4,9 +4,18 @@ import com.exception.DIYException;
 
 public class Hero {
     String name;//姓名
-    float hp;//血量
+    public float hp;//血量
     float armor;//护甲
     int moveSpeed;//移动速度
+
+    public int damage;
+
+    public Hero(String name, float hp, int damage) {
+        this.name = name;
+        this.hp = hp;
+        this.damage = damage;
+    }
+
     static String copyRight="r1";
     public Hero(){
         System.out.println("父类的无参构造方法");
@@ -15,6 +24,14 @@ public class Hero {
     @Override
     public String toString() {
         return this.name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Hero(String name, float hp){

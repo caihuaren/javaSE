@@ -4,8 +4,18 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Node {
-    public Node left;
+public class Node<T extends Comparable<T>> {
+    Node<T> left;
+    Node<T> right;
+    T value;
+    public void add(T i){
+        if(value==null) value=i;
+        else if (i.compareTo(value)<=0) {
+
+        }
+    }
+
+   /* public Node left;
     public Node right;
     public Object value;
     public void add(int i){
@@ -38,5 +48,5 @@ public class Node {
             n.add(i);
         }
         System.out.println(n.middleTraverse(n));
-    }
+    }*/
 }

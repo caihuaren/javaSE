@@ -1,9 +1,6 @@
 package com.collection;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 public class HashMapStudy {
     public static void main(String[] args) {
@@ -26,6 +23,16 @@ public class HashMapStudy {
         }for(Integer i:map.values()) System.out.print(i+" ");
         System.out.println();
         Random random=new Random();
-
+        HashMap<String,String> map1=new HashMap<>();
+        HashMap<String,String> map2=new HashMap<>();
+        map1.put("adc", "物理英雄");
+        map1.put("apc", "魔法英雄");
+        map1.put("t",  "坦克");
+        Set<String> set=map1.keySet();
+        for (String s : set) {
+            map2.put(map1.get(s),s);
+        }
+        map1=map2;
+        System.out.println(map1.values());
     }
 }
